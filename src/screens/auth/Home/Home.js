@@ -9,13 +9,13 @@ import Btn from '../../../components/Btn/Btn';
 export const Home = () => {
     return (<>
         {/* News */}
-        <marquee className="news">
+        <marquee className="news boxS borderR">
             <font color="red" size="3">
                 <i className="uil uil-volume" style={{ fontSize: '22px', marginTop: '8px' }}></i>Notice: HappyMiner has not created any Telegram groups or channels, please identify carefully to avoid being deceived.
             </font>
         </marquee>
         {/* Hero Section */}
-        <section className='heroSection'>
+        <section className='heroSection boxS borderR'>
             <Grid container spacing={5} >
                 <Grid item lg={6} md={6} sm={12} xm={12} xs={12}>
                     <div className='bannerImg' onClick={() => alert('Img Clicked')} >
@@ -32,7 +32,7 @@ export const Home = () => {
             </Grid>
         </section>
         {/* Instruction Section */}
-        <section className='InstructionSection'>
+        <section className='InstructionSection boxS borderR'>
             <h3>How To Start Earning</h3>
             <img src={LineImg} className='lineImg' />
             <div style={{ height: '25px' }} ></div>
@@ -74,6 +74,8 @@ export const Home = () => {
 
             </Grid>
         </section>
+
+
 
     </>
     )

@@ -1,0 +1,111 @@
+.mainBox{
+    padding: 1% 15%;
+}
+
+.contentBox{
+    background-color: white;
+    overflow: hidden;
+}
+
+.mainContent{
+    padding: 10%; 
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+.agreeBox{
+    display: flex;
+    align-items: center;
+}
+.agreeBox p{
+    font-size: 14px;
+    color: var(--primary-text);
+    font-weight: 500;
+}
+
+.agreeBox #p2{
+    color: var(--secondary-bg);
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.agreeBox #p2:hover{
+    opacity: 0.8;
+}
+.capachu{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.capachuImg{
+    width:40%;
+}
+
+.or{
+    color: var(--primary-text);
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.alreadyhave{
+    font-weight: 600;
+    justify-content: center;
+}
+
+/* .forgotBox{
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    justify-content: center;
+}
+
+.dontHaveAccount{
+    color:var(--secondary-bg);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dontHaveAccount:hover{
+    transition: 0.5s ease;
+    opacity: 0.8;
+}
+
+.forgotPassword{
+    color: var(--primary-text);
+    font-weight: 600;
+    cursor: pointer;
+} */
+
+.forgotPassword:hover{
+    color:var(--secondary-bg);
+    transition: 0.5s ease;
+}
+
+@media screen and (max-width:768px) {
+    .imgBox{
+        display: none;
+    }
+
+    .mainBox{
+        padding: 5%;
+    }
+
+    .mainContent{
+        padding: 10%; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;      
+    }
+
+    .forgotBox{
+        flex-direction: column;
+        align-items: center;
+        gap:30px;
+    }
+    
+}

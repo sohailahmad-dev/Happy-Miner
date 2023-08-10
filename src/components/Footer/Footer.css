@@ -1,0 +1,24 @@
+.footer{
+    background-color: black;
+    padding: 30px 5%;
+    color: white;
+    margin: 20px -1%;
+    margin-bottom: -2%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.rightSideFooter{
+    display: flex;
+    color: var(--primary-text);
+    gap: 10px;
+}
+
+.rightSideFooter div{
+    cursor: pointer;
+}
+
+.rightSideFooter div:hover{
+    color: white;
+}

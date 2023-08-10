@@ -17,3 +17,23 @@ body{
   height: 2px;
   width: 50px;
 }
+
+.borderR{
+  border-radius: 10px;
+}
+
+.boxS{
+  box-shadow: 1px 5px 5px rgba(0,0,0,0.1);
+}
+
+.box{
+  background-color: white ;
+  padding: 30px 15px;
+}
+
+p{
+  line-height: 27px;
+  text-align: justify;
+  color: var(--secondary-text);
+}
+

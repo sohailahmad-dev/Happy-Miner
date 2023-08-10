@@ -12,6 +12,11 @@ import QuizIcon from '@mui/icons-material/Quiz';
 import InfoIcon from '@mui/icons-material/Info';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Home } from '../../screens/auth/Home/Home';
+import { Footer } from '../Footer/Footer';
+import { SignIn } from '../../screens/auth/SignIn/SignIn';
+import { SignUp } from '../../screens/auth/SignUp/SignUp';
+import { ResetPassword } from '../../screens/auth/ResetPassword/ResetPassword';
+import { Terms } from '../../screens/auth/Terms/Terms';
 
 
 
@@ -29,7 +34,7 @@ export const Drawer = () => {
         {
             label: 'Home',
             icon: (color) => <HomeIcon sx={{ color: color }} />,
-            to: '/'
+            to: '/Home'
         },
         {
             label: 'Packages',
@@ -52,6 +57,14 @@ export const Drawer = () => {
             to: '/'
         },
     ]
+
+    const handleBtnClick = (e) => {
+        setActiveScreen(e.label);
+        navigate(e.to)
+        if (deviceType === 'Mobile') {
+            setMenu(!menu)
+        }
+    }
 
     useEffect(() => {
         menu ? setActiveMenu('navLinks') : setActiveMenu("navLinks activeMenu");
@@ -102,12 +115,18 @@ export const Drawer = () => {
                 <div className='btnsBox'>
                     <Btn
                         label='Sign In'
-                        onClick={() => navigate('/Home')}
+                        onClick={() => {
+                            setActiveScreen('SignIn')
+                            navigate('/SignIn')
+                        }}
                         bgColor={Colors.secondary_bg}
                     />
                     {deviceType !== "Mobile" && <Btn
                         label='Sign Up'
-                        onClick={() => navigate('/Home')}
+                        onClick={() => {
+                            setActiveScreen('/SignUp')
+                            navigate('/SignUp')
+                        }}
                         bgColor="#ffc10769"
                         className='signUpBtn'
                     />}
@@ -126,17 +145,23 @@ export const Drawer = () => {
                                     bgColor={activeScreen === e.label ? Colors.secondary_bg : Colors.primary_bg}
                                     color={activeScreen === e.label ? Colors.accent_text : Colors.primary_text}
                                     icon={e.icon}
-                                    onClick={() => setActiveScreen(e.label)}
+                                    onClick={() => handleBtnClick(e)}
                                 />
                             )
                         })
                     }
 
                 </div>
+                {/* Main Content of Screeens  */}
                 <div className={handleContent} >
                     <Routes>
                         <Route path='Home' element={<Home />}></Route>
+                        <Route path='SignIn' element={<SignIn />}></Route>
+                        <Route path='SignUp' element={<SignUp />}></Route>
+                        <Route path='ResetPassword' element={<ResetPassword />}></Route>
+                        <Route path='Terms' element={<Terms />}></Route>
                     </Routes>
+                    <Footer />
                 </div>
 
             </div>
